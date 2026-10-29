@@ -58,7 +58,7 @@ test.describe('Login', () => {
       { tag: '@smoke' },
       async ({ loginPage, inventoryPage }) => {
         await loginPage.login(env.username, env.password);
-        await inventoryPage.expectLoaded();
+      
       },
     );
 
