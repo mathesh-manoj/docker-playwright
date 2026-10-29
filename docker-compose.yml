@@ -1,0 +1,11 @@
+services:
+  e2e:
+    build: .
+    image: saucedemo-tests
+    environment:
+      - BASE_URL=${BASE_URL:-https://www.saucedemo.com}
+      - SAUCE_USER=${SAUCE_USER:-standard_user}
+      - SAUCE_PASSWORD=${SAUCE_PASSWORD:-}
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
